@@ -1,0 +1,107 @@
+
+export const columns = [
+  {
+    id: "ideas",
+    title: "Ideas",
+    count: "04",
+    color: "#9da58b",
+    tasks: [
+      {
+        id: 1,
+        title: "Redesign the landing page",
+        description: "Explore a more creative visual direction.",
+        tag: "Design",
+        date: "Sep 24",
+        priority: "Medium",
+      },
+      {
+        id: 2,
+        title: "Mobile app concept",
+        description: "Create initial mobile workspace ideas.",
+        tag: "Product",
+        date: "Sep 26",
+        priority: "Low",
+      },
+      {
+        id: 3,
+        title: "Plan team offsite",
+        description: "Collect ideas for team activities.",
+        tag: "Planning",
+        date: "Sep 28",
+        priority: "Medium",
+      },
+    ],
+  },
+  {
+    id: "progress",
+    title: "In Progress",
+    count: "03",
+    color: "#a99ab9",
+    tasks: [
+      {
+        id: 4,
+        title: "Build authentication",
+        description: "Create login and signup screens.",
+        tag: "Development",
+        date: "Sep 23",
+        priority: "High",
+      },
+      {
+        id: 5,
+        title: "Design system v2",
+        description: "Improve buttons, cards and spacing.",
+        tag: "Design",
+        date: "Sep 25",
+        priority: "Medium",
+      },
+    ],
+  },
+  {
+    id: "review",
+    title: "Review",
+    count: "02",
+    color: "#d58b6d",
+    tasks: [
+      {
+        id: 6,
+        title: "API integration",
+        description: "Review the frontend API structure.",
+        tag: "Development",
+        date: "Sep 22",
+        priority: "High",
+      },
+      {
+        id: 7,
+        title: "Marketing assets",
+        description: "Review the new campaign assets.",
+        tag: "Marketing",
+        date: "Sep 27",
+        priority: "Low",
+      },
+    ],
+  },
+  {
+    id: "done",
+    title: "Done",
+    count: "05",
+    color: "#829b7c",
+    tasks: [
+      {
+        id: 8,
+        title: "Project setup",
+        description: "Initialize the Syncra project.",
+        tag: "Development",
+        date: "Sep 18",
+        priority: "High",
+      },
+      {
+        id: 9,
+        title: "Brand guidelines",
+        description: "Define the visual identity.",
+        tag: "Design",
+        date: "Sep 19",
+        priority: "Medium",
+      },
+    ],
+  },
+];
