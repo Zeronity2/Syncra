@@ -1,87 +1,199 @@
-
 export default function Sidebar({ darkMode }) {
   return (
     <aside
-      className={`relative hidden w-[245px] shrink-0 border-r px-6 py-8 lg:block ${
+      className={`relative hidden w-[250px] shrink-0 border-r px-5 py-7 lg:block ${
         darkMode
-          ? "border-[#39342e] bg-[#1c1b19]"
-          : "border-[#d4c9b9] bg-[#f4eee4]"
+          ? "border-white/10 bg-[#1b1917]"
+          : "border-[#d5cab9] bg-[#f4eee4]"
       }`}
     >
       {/* Logo */}
-      <div className="mb-12">
-        <h1 className="font-serif text-4xl italic tracking-tight">
-          syncra<span className="text-[#d47752]">.</span>
-        </h1>
+      <div className="px-3">
+        <div className="flex items-center gap-2">
+          <h1 className="font-serif text-4xl italic tracking-tight">
+            syncra
+            <span className="text-[#d47752]">.</span>
+          </h1>
 
-        <p className="mt-1 text-[10px] uppercase tracking-[0.25em] opacity-45">
+          <span className="mt-[-18px] text-lg text-[#d47752]">
+            ✦
+          </span>
+        </div>
+
+        <p className="mt-1 text-[9px] uppercase tracking-[0.28em] opacity-40">
           work together
         </p>
       </div>
 
       {/* Main navigation */}
-      <nav className="space-y-2 text-sm">
-        <div className="rounded-xl bg-[#d47752] px-4 py-3 text-white shadow-sm">
-          <span className="mr-3">⌂</span>
-          Home
-        </div>
+      <nav className="mt-10 space-y-1">
 
-        <div className="rounded-xl px-4 py-3 opacity-60 transition hover:bg-white/10">
-          <span className="mr-3">✦</span>
-          My Tasks
-        </div>
+        <p className="mb-3 px-3 text-[9px] uppercase tracking-[0.2em] opacity-35">
+          Workspace
+        </p>
 
-        <div className="rounded-xl px-4 py-3 opacity-60 transition hover:bg-white/10">
-          <span className="mr-3">✉</span>
-          Inbox
+        {/* Home */}
+        <button
+          className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm transition ${
+            darkMode
+              ? "bg-[#d47752] text-white"
+              : "bg-[#292724] text-white"
+          }`}
+        >
+          <span className="text-base">⌂</span>
+          <span>Home</span>
 
-          <span className="float-right rounded-full bg-[#d47752] px-2 py-0.5 text-[10px] text-white">
+          <span className="ml-auto text-[9px] opacity-60">
+            H
+          </span>
+        </button>
+
+        {/* My Tasks */}
+        <button className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-60 transition hover:bg-current/5 hover:opacity-100">
+          <span className="text-base">✓</span>
+          <span>My Tasks</span>
+        </button>
+
+        {/* Inbox */}
+        <button className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-60 transition hover:bg-current/5 hover:opacity-100">
+          <span className="text-base">○</span>
+          <span>Inbox</span>
+
+          <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-[#d47752] px-1.5 text-[9px] text-white">
             3
           </span>
-        </div>
+        </button>
 
-        <div className="rounded-xl px-4 py-3 opacity-60 transition hover:bg-white/10">
-          <span className="mr-3">⌁</span>
-          Analytics
-        </div>
+        {/* Activity */}
+        <button className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-60 transition hover:bg-current/5 hover:opacity-100">
+          <span className="text-base">⌁</span>
+          <span>Activity</span>
+        </button>
       </nav>
 
       {/* Workspaces */}
-      <div className="mt-12">
-        <p className="mb-4 px-4 text-[10px] uppercase tracking-[0.2em] opacity-40">
-          Workspaces
-        </p>
+      <div className="mt-10">
 
-        <div className="rounded-xl bg-current/5 px-4 py-3 text-sm">
-          <span className="mr-2">✦</span>
-          Design Team
+        <div className="mb-3 flex items-center justify-between px-3">
+          <p className="text-[9px] uppercase tracking-[0.2em] opacity-35">
+            Your spaces
+          </p>
+
+          <button className="text-sm opacity-40 hover:opacity-100">
+            +
+          </button>
         </div>
 
-        <div className="px-4 py-3 text-sm opacity-60">
-          <span className="mr-2">✦</span>
-          Dev Squad
-        </div>
+        {/* Design workspace */}
+        <button
+          className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm ${
+            darkMode
+              ? "bg-white/5"
+              : "bg-[#e2d9cc]"
+          }`}
+        >
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#d8c5aa] text-xs">
+            ✦
+          </span>
 
-        <div className="px-4 py-3 text-sm opacity-60">
-          <span className="mr-2">✦</span>
-          Product
-        </div>
+          <div>
+            <p className="font-medium">
+              Design Team
+            </p>
 
-        <button className="mt-3 px-4 text-sm opacity-50 hover:opacity-100">
-          + New workspace
+            <p className="text-[9px] opacity-40">
+              12 tasks
+            </p>
+          </div>
+
+          <span className="ml-auto text-xs opacity-30">
+            →
+          </span>
         </button>
+
+        {/* Dev */}
+        <button className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-60 transition hover:bg-current/5 hover:opacity-100">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#c9d3c3] text-xs">
+            ◇
+          </span>
+
+          <div>
+            <p>Dev Squad</p>
+            <p className="text-[9px] opacity-40">
+              8 tasks
+            </p>
+          </div>
+        </button>
+
+        {/* Product */}
+        <button className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-60 transition hover:bg-current/5 hover:opacity-100">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#d8c8dc] text-xs">
+            ○
+          </span>
+
+          <div>
+            <p>Product</p>
+            <p className="text-[9px] opacity-40">
+              5 tasks
+            </p>
+          </div>
+        </button>
+
+      </div>
+
+      {/* New workspace */}
+      <button className="mt-3 flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm opacity-40 transition hover:bg-current/5 hover:opacity-100">
+        <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-dashed border-current">
+          +
+        </span>
+
+        New workspace
+      </button>
+
+      {/* Decorative quote */}
+      <div
+        className={`absolute bottom-[115px] left-7 right-7 rotate-[-3deg] px-4 py-3 font-serif text-sm italic ${
+          darkMode
+            ? "bg-[#3d372f] text-[#dfcdb4]"
+            : "bg-[#e7d6b4] text-[#65543d]"
+        }`}
+      >
+        Make space for
+        <br />
+        good ideas. ✦
       </div>
 
       {/* User profile */}
-      <div className="absolute bottom-8 left-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d47752] text-sm text-white">
-          K
+      <div
+        className={`absolute bottom-6 left-5 right-5 flex items-center gap-3 border-t pt-5 ${
+          darkMode
+            ? "border-white/10"
+            : "border-[#d5cab9]"
+        }`}
+      >
+        <div className="relative">
+
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#d47752] text-sm font-medium text-white">
+            K
+          </div>
+
+          {/* Online */}
+          <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-[#f4eee4] bg-[#78916f]" />
         </div>
 
-        <div>
-          <p className="text-sm font-medium">Khushi ✦</p>
-          <p className="text-xs opacity-45">Keep going ♡</p>
+        <div className="min-w-0">
+          <p className="truncate text-sm font-medium">
+            Khushi
+          </p>
+
+          <p className="text-[10px] opacity-40">
+            Online · working on Syncra
+          </p>
         </div>
+
+        <button className="ml-auto text-sm opacity-40 hover:opacity-100">
+          ···
+        </button>
       </div>
     </aside>
   );
